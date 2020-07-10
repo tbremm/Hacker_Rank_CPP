@@ -8,16 +8,18 @@ using namespace std;
 
 vector<int> parseInts(string str) {
 	stringstream ss(str);
+    vector<int> out;
+    int num = 0;
     char comma;
-    vector<int> nums;
-    while(ss) {
-        int num = 0;
-        ss >> num;
-        printf("%d", num);
-        nums.push_back(num);
-        // printf("%d", ss.get());  // Gets the ascii number for the char, not the actual char or number
+    while (!ss.eof()) {
+        if (ss.peek() != ',') {
+            ss >> num;
+            out.push_back(num);
+        } else {
+            ss >> comma;  // Who cares
+        }
     }
-    return nums;
+    return out;
 }
 
 int main() {
