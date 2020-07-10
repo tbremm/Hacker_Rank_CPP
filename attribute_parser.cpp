@@ -1,6 +1,8 @@
 // Attribute parser
 // https://www.hackerrank.com/challenges/attribute-parser/problem
 
+// Putting this on hold for a while to come back with a fresh perspective
+
 #include <cmath>
 #include <cstdio>
 #include <vector>
